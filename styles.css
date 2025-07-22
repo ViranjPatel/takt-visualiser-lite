@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    height: 60px;
+    background: #1a1a1a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #666;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+.btn-primary {
+    background: #3498db;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.btn-danger {
+    background: #e74c3c;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+.btn-small {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* Layout */
+.content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background: #f5f5f5;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Toolbar */
+.toolbar {
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.toolbar label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.toolbar input[type="number"],
+.toolbar select {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Scheduler */
+.scheduler-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Zone Tree */
+.zone-tree {
+    margin-bottom: 10px;
+}
+
+.zone-item {
+    padding: 6px 8px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px;
+    margin-bottom: 2px;
+}
+
+.zone-item:hover {
+    background: #e0e0e0;
+}
+
+.zone-item.selected {
+    background: #3498db;
+    color: white;
+}
+
+.zone-children {
+    margin-left: 20px;
+}
+
+/* Trade List */
+.trade-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.trade-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+}
+
+.trade-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* DayPilot Overrides */
+.scheduler_default_event_inner {
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+/* Trade Colors */
+.trade-1 { background-color: #3498db !important; }
+.trade-2 { background-color: #2ecc71 !important; }
+.trade-3 { background-color: #f39c12 !important; }
+.trade-4 { background-color: #e74c3c !important; }
+.trade-5 { background-color: #9b59b6 !important; }
+
+/* Status Styles */
+.status-planned { opacity: 0.8; }
+.status-in-progress { 
+    border-left: 4px solid #f39c12 !important;
+    padding-left: 2px !important;
+}
+.status-completed { 
+    opacity: 0.5;
+    background-color: #95a5a6 !important;
+}
