@@ -1,0 +1,169 @@
+{
+  "version": 1,
+  "exported": "2025-07-22T08:00:00.000Z",
+  "data": {
+    "tasks": [
+      {
+        "id": 1,
+        "name": "Framing - Zone 1A",
+        "zone_id": 4,
+        "trade_id": 1,
+        "start_date": "2025-08-01",
+        "duration": 5,
+        "status": "planned"
+      },
+      {
+        "id": 2,
+        "name": "Electrical Rough-in - Zone 1A",
+        "zone_id": 4,
+        "trade_id": 2,
+        "start_date": "2025-08-08",
+        "duration": 3,
+        "status": "planned"
+      },
+      {
+        "id": 3,
+        "name": "Plumbing Rough-in - Zone 1A",
+        "zone_id": 4,
+        "trade_id": 3,
+        "start_date": "2025-08-08",
+        "duration": 3,
+        "status": "planned"
+      },
+      {
+        "id": 4,
+        "name": "Drywall - Zone 1A",
+        "zone_id": 4,
+        "trade_id": 4,
+        "start_date": "2025-08-12",
+        "duration": 4,
+        "status": "planned"
+      },
+      {
+        "id": 5,
+        "name": "Painting - Zone 1A",
+        "zone_id": 4,
+        "trade_id": 5,
+        "start_date": "2025-08-18",
+        "duration": 3,
+        "status": "planned"
+      },
+      {
+        "id": 6,
+        "name": "Framing - Zone 1B",
+        "zone_id": 5,
+        "trade_id": 1,
+        "start_date": "2025-08-03",
+        "duration": 5,
+        "status": "planned"
+      },
+      {
+        "id": 7,
+        "name": "Electrical Rough-in - Zone 1B",
+        "zone_id": 5,
+        "trade_id": 2,
+        "start_date": "2025-08-10",
+        "duration": 3,
+        "status": "planned"
+      },
+      {
+        "id": 8,
+        "name": "Plumbing Rough-in - Zone 1B",
+        "zone_id": 5,
+        "trade_id": 3,
+        "start_date": "2025-08-10",
+        "duration": 3,
+        "status": "planned"
+      },
+      {
+        "id": 9,
+        "name": "Drywall - Zone 1B",
+        "zone_id": 5,
+        "trade_id": 4,
+        "start_date": "2025-08-14",
+        "duration": 4,
+        "status": "planned"
+      },
+      {
+        "id": 10,
+        "name": "Painting - Zone 1B",
+        "zone_id": 5,
+        "trade_id": 5,
+        "start_date": "2025-08-20",
+        "duration": 3,
+        "status": "planned"
+      }
+    ],
+    "zones": [
+      {
+        "id": 1,
+        "name": "Building A",
+        "parent_id": null,
+        "level": 0
+      },
+      {
+        "id": 2,
+        "name": "Floor 1",
+        "parent_id": 1,
+        "level": 1
+      },
+      {
+        "id": 3,
+        "name": "Floor 2",
+        "parent_id": 1,
+        "level": 1
+      },
+      {
+        "id": 4,
+        "name": "Zone 1A",
+        "parent_id": 2,
+        "level": 2
+      },
+      {
+        "id": 5,
+        "name": "Zone 1B",
+        "parent_id": 2,
+        "level": 2
+      },
+      {
+        "id": 6,
+        "name": "Zone 2A",
+        "parent_id": 3,
+        "level": 2
+      },
+      {
+        "id": 7,
+        "name": "Zone 2B",
+        "parent_id": 3,
+        "level": 2
+      }
+    ],
+    "trades": [
+      {
+        "id": 1,
+        "name": "Framing",
+        "color": "#3498db"
+      },
+      {
+        "id": 2,
+        "name": "Electrical",
+        "color": "#2ecc71"
+      },
+      {
+        "id": 3,
+        "name": "Plumbing",
+        "color": "#f39c12"
+      },
+      {
+        "id": 4,
+        "name": "Drywall",
+        "color": "#e74c3c"
+      },
+      {
+        "id": 5,
+        "name": "Painting",
+        "color": "#9b59b6"
+      }
+    ]
+  }
+}
