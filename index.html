@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takt Visualiser Lite</title>
+    <script src="https://cdn.jsdelivr.net/npm/daypilot-pro-javascript@2024.1.5/daypilot-all.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>Takt Visualiser Lite</h1>
+            <div class="header-actions">
+                <button id="btn-new-task" class="btn btn-primary">+ New Task</button>
+                <button id="btn-import" class="btn">Import</button>
+                <button id="btn-export" class="btn">Export</button>
+                <button id="btn-clear" class="btn btn-danger">Clear All</button>
+            </div>
+        </header>
+        
+        <div class="content">
+            <aside class="sidebar">
+                <h3>Zones</h3>
+                <div id="zone-tree" class="zone-tree">
+                    <!-- Zones will be rendered here -->
+                </div>
+                <button id="btn-add-zone" class="btn btn-small">+ Add Zone</button>
+                
+                <h3>Trades</h3>
+                <div id="trade-list" class="trade-list">
+                    <!-- Trades will be rendered here -->
+                </div>
+            </aside>
+            
+            <main class="main">
+                <div class="toolbar">
+                    <label>View:
+                        <select id="view-type">
+                            <option value="Days" selected>Days</option>
+                            <option value="Weeks">Weeks</option>
+                            <option value="Months">Months</option>
+                        </select>
+                    </label>
+                    <label>Days:
+                        <input type="number" id="days-count" value="90" min="7" max="365">
+                    </label>
+                    <label>Zoom:
+                        <input type="range" id="zoom-level" min="20" max="100" value="40">
+                    </label>
+                </div>
+                
+                <div id="scheduler" class="scheduler-container"></div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Task Editor Modal -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">New Task</h3>
+            <form id="task-form">
+                <div class="form-group">
+                    <label>Task Name:</label>
+                    <input type="text" id="task-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Zone:</label>
+                    <select id="task-zone" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Trade:</label>
+                    <select id="task-trade"></select>
+                </div>
+                <div class="form-group">
+                    <label>Start Date:</label>
+                    <input type="date" id="task-start" required>
+                </div>
+                <div class="form-group">
+                    <label>Duration (days):</label>
+                    <input type="number" id="task-duration" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label>Status:</label>
+                    <select id="task-status">
+                        <option value="planned">Planned</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- File input for import -->
+    <input type="file" id="file-input" accept=".json" style="display: none;">
+    
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
